@@ -1,6 +1,4 @@
 <powershell>
-$admin = [adsi]("WinNT://./Administrator, user")
-$admin.psbase.invoke("SetPassword", "Ch4ng3m3")
 winrm qc -q
 winrm set winrm/config '@{MaxTimeoutms="1800000"}'
 winrm set winrm/config/service '@{AllowUnencrypted="true"}'
